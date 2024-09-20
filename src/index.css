@@ -95,7 +95,7 @@ header {
 	opacity: 0;
 }
 
-[type="radio"]:checked ~ label {
+[type="radio"]:checked~label {
 	background: #ff6a95;
 	color: #fff;
 }
@@ -227,4 +227,6 @@ input:focus {
 	.input-group input {
 		width: 80%;
 	}
+
+
 }

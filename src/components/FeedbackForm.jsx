@@ -9,8 +9,25 @@ function FeedbackForm() {
 	const [rating, setRating] = useState(10);
 	const [btnDisabled, setBtnDisabled] = useState(true);
 	const [message, setMessage] = useState("");
+	const [placeholder, setPlaceholder] = useState("Escreva uma avaliação");
 
 	const { addFeedback, feedbackEdit, updateFeedback } = useContext(FeedbackContext);
+
+	useEffect(() => {
+		const updatePlaceholder = () => {
+			if (window.innerWidth < 600) {
+				setPlaceholder("Avalie");
+			} else {
+				setPlaceholder("Escreva uma avaliação");
+			}
+		};
+
+		updatePlaceholder();
+
+		window.addEventListener("resize", updatePlaceholder);
+
+		return () => window.removeEventListener("resize", updatePlaceholder);
+	}, []);
 
 	useEffect(() => {
 		if (feedbackEdit.edit === true) {
@@ -60,12 +77,7 @@ function FeedbackForm() {
 				<h2>Como você avalia o serviço?</h2>
 				<RatingSelect select={setRating} selected={rating} />
 				<div className="input-group">
-					<input
-						onChange={handleTextChange}
-						type="text"
-						placeholder="Escreva uma avaliação"
-						value={text}
-					/>
+					<input onChange={handleTextChange} type="text" placeholder={placeholder} value={text} />
 					<Button type="submit" isDisabled={btnDisabled}>
 						Enviar
 					</Button>
