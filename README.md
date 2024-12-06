@@ -61,19 +61,13 @@ Este projeto proporcionou um aprendizado prático sobre:
 
 ---
 
-## 🛠️ Clone o repositório:
-
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/rodrigocvmd/feedback-app.git
+   `git clone https://github.com/rodrigocvmd/feedback-app.git`
 
 2. Instale as dependências:
-   ```bash
-   npm install
+   `npm install`
 
 3. Inicie a aplicação:
-   ```bash
-   npm start 
+   `npm start`
 
 4. Acesse a aplicação em 'http://localhost:3000' ou na porta que estiver utilizando.
-
