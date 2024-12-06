@@ -61,9 +61,7 @@ Este projeto proporcionou um aprendizado prático sobre:
 
 ---
 
-## 🛠️ Como Executar
+## 🛠️ Clone o repositório:
 
-1. Clone o repositório:
-   ```bash
    git clone https://github.com/rodrigocvmd/feedback-app.git
 
